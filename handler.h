@@ -7,7 +7,7 @@
 #include"figure.h"
 
 struct handler {
-	virtual void execute(std::vector<std::unique_ptr<figure>>& figures ) = 0;
+	virtual void execute(std::vector<std::unique_ptr<figure>>& figures) = 0;
 	virtual ~handler() = default;
 };
 
@@ -24,7 +24,6 @@ struct file_handler : handler {
 		}
 	}
 };
-
 struct console_handler : handler {
 	void execute(std::vector<std::unique_ptr<figure>>& figures) override {
 		for (int i = 0; i < figures.size(); ++i) {
@@ -32,4 +31,5 @@ struct console_handler : handler {
 		}
 	}
 };
+
 #endif //D_HANDLER_H

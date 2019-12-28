@@ -12,6 +12,5 @@ private:
 public:
     void read(std::istream& is) override;
     void print(std::ostream& os) const override;
-    void print(std::string& filename) const override;
 };
 #endif //D_RECTANGLE_H
